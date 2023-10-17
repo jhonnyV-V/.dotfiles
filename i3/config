@@ -214,4 +214,5 @@ assign [class="firefox"] $ws2
 
 bindsym $mod+Shift+x exec i3lock
 exec_always "feh --bg-scale ~/Pictures/54342.jpg"
-exec Xfce4-terminal
+#before running this make sure xfce have no keybindings that use mod
+exec --no-startup-id xfsettingsd
