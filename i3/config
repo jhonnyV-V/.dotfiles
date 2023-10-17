@@ -213,6 +213,7 @@ bar {
 assign [class="firefox"] $ws2
 
 bindsym $mod+Shift+x exec i3lock
+bindsym $mod+Shift+p exec "shutdown -p now"
 exec_always "feh --bg-scale ~/Pictures/54342.jpg"
 #before running this make sure xfce have no keybindings that use mod
 exec --no-startup-id xfsettingsd
