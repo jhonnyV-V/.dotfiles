@@ -68,7 +68,7 @@ bindsym $mod+d exec --no-startup-id "rofi -modi drun,run -show drun"
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
 
-bindsym Print exec scrot '~/Pictures/Cheese_%a-%d%b%y_%H.%M.png' -e 'xdg-open ~/$f'
+bindsym Print exec scrot ~/Pictures/Scrot/Full/Cheese_%a-%d%b%y_%H.%M.png
 
 # change focus
 bindsym $mod+h focus left
