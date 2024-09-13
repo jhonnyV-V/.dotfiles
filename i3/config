@@ -222,7 +222,8 @@ bindsym $mod+r mode "resize"
 
 # panel
 bar {
-	status_command i3status
+        status_command ~/.config/i3/i3-status-gpu-temp
+	#status_command i3status
 	#position top
 	workspace_min_width 24
 	strip_workspace_numbers yes
