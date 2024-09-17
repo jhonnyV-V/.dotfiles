@@ -227,6 +227,7 @@ bar {
 	#position top
 	workspace_min_width 24
 	strip_workspace_numbers yes
+        tray_output DP-0
 
 	colors {
 	background #141c21
