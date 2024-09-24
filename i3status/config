@@ -72,14 +72,19 @@ cpu_temperature 0 {
 	path = "/sys/class/thermal/thermal_zone2/temp"
 }
 
-
 # wireless wlp2s0 {
 # 	format_up = "<span background='#289c93'>  󰖩  </span><span background='#bfbaac'>  %essid  </span>"
 # 	format_down = "<span background='#289c93'>  󰖪  </span><span background='#bfbaac'>  Disconnected  </span>"
 # }
-ethernet _first_ {
-	format_up = "<span background='#289c93'> 󰈀  </span><span background='#bfbaac'>  %speed  </span>"
-	format_down = "<span background='#289c93'> 󰈂  </span><span background='#bfbaac'>  Disconnected  </span>"
+# ethernet _first_ {
+# 	format_up = "<span background='#289c93'> 󰈀  </span><span background='#bfbaac'>  %speed  </span>"
+# 	format_down = "<span background='#289c93'> 󰈂  </span><span background='#bfbaac'>  Disconnected  </span>"
+# }
+#
+
+wireless wlp2s0 {
+	format_up = "<span background='#289c93'>  󰖩  </span><span background='#bfbaac'>  %essid  </span>"
+	format_down = "<span background='#289c93'>  󰖪  </span><span background='#bfbaac'>  Disconnected  </span>"
 }
 
 volume master {
