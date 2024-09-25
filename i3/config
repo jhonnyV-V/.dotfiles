@@ -33,7 +33,9 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
 
 #walpaper
-exec --no-startup-id rand-wallpaper
+#exec --no-startup-id rand-wallpaper
+#exec --no-startup-id hsetroot -cover ~/.wallpaper.png
+exec --no-startup-id hsetroot -cover ~/Pictures/54342.jpg
 
 #set darkmode
 exec --no-startup-id /usr/libexec/gsd-xsettings
