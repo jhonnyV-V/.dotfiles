@@ -263,7 +263,7 @@ client.background #263640
 
 
 assign [class="firefox"] $ws2
-assign [class="librewolf"] $ws2
+assign [class="LibreWolf"] $ws2
 
 bindsym $mod+Shift+x exec i3lock -i ~/.lock.png
 bindsym $mod+Shift+p exec "shutdown now"
