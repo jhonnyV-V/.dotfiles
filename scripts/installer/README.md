@@ -1,3 +1,8 @@
+first execute the ./dependencies.sh script with root access
+```bash
+sudo ./dependencies.sh
+```
+
 you probably know the deal put this folder or its parent in your PATH
 like this
 
@@ -51,6 +56,5 @@ automatically add fonts
 nodejs and from npm
 - tldr
 - degit
-
 
 maybe android studio? maybe in some kind of optional folder
