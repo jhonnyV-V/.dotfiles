@@ -33,6 +33,7 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
 
 #walpaper
+#exec --no-startup-id rand-wallpaper
 #exec --no-startup-id hsetroot -cover ~/.wallpaper.png
 exec --no-startup-id hsetroot -cover ~/Pictures/54342.jpg
 
@@ -54,6 +55,7 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightne
 floating_modifier $mod
 
 # start a terminal
+#bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Return exec wezterm
 
 # kill focused window
@@ -67,7 +69,8 @@ bindsym $mod+d exec --no-startup-id "rofi -modi drun,run -show drun"
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
 
-bindsym Print exec scrot ~/Pictures/Scrot/Full/Cheese_%a-%d%b%y_%H.%M.png
+bindsym Print exec flameshot full --path ~/Pictures/ScreenShots/Full --clipboard
+bindsym Shift+Print exec flameshot gui --path ~/Pictures/ScreenShots/Selected --clipboard
 
 # change focus
 bindsym $mod+h focus left
