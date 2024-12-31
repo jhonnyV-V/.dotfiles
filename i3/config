@@ -260,10 +260,15 @@ client.background #263640
 #hide_edge_borders smart
 #gaps inner 12
 #smart_gaps on
-
-
+#to get the class use xprop | grep WM_CLASS | awk '{ print $4 }'
 assign [class="firefox"] $ws2
 assign [class="LibreWolf"] $ws2
+assign [class="obsidian"] $ws6
+assign [class="thunderbird-esr"] $ws7
+assign [class="discord"] $ws8
+assign [class="TelegramDesktop"] $ws8
+assign [class="obs"] $ws9
+assign [class="KeePassXC"] $ws10
 
 bindsym $mod+Shift+x exec i3lock -i ~/.lock.png
 bindsym $mod+Shift+p exec "shutdown now"
