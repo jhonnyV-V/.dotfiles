@@ -1,9 +1,14 @@
 #!/usr/bin/env bash
 
+code=""
+if [[ ! -z $CODE ]]; then
+    code=$(find $CODE -mindepth 1 -maxdepth 1 -type d)
+fi
+
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
-    selected=$(find ~/Documents/ ~/Downloads ~/ ~/Documents/code/job ~/Documents/code ~/Documents/code/js ~/Documents/code/python ~/Documents/code/go ~/.config -mindepth 1 -maxdepth 1 -type d | fzf)
+    selected=$(find ~/Documents/ ~/Downloads ~/ ~/Work $code ~/.config -mindepth 1 -maxdepth 1 -type d | fzf)
 fi
 
 if [[ -z $selected ]]; then
