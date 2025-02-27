@@ -270,6 +270,10 @@ assign [class="TelegramDesktop"] $ws8
 assign [class="obs"] $ws9
 assign [class="KeePassXC"] $ws10
 
+for_window [class="discord"] layout stacking
+for_window [class="TelegramDesktop"] layout stacking
+for_window [class="LibreWolf"] layout stacking
+
 bindsym $mod+Shift+x exec i3lock -i ~/.lock.png
 bindsym $mod+Shift+p exec "shutdown now"
 #before running this make sure xfce have no keybindings that use mod
