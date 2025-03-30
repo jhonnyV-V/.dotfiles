@@ -8,7 +8,7 @@ UserHome="/home/$SUDO_USER"
 UserConfig="$UserHome/.config"
 
 if [! -d "$UserHome/Code/c/neovim" ]; then
-  git clone -b v0.10.4 git@github.com:neovim/neovim.git $UserHome/Code/c/neovim
+  git clone -b v0.11.0 git@github.com:neovim/neovim.git $UserHome/Code/c/neovim
 fi
 
 cd $UserHome/Code/c/neovim
