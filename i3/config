@@ -265,16 +265,23 @@ assign [class="firefox"] $ws2
 assign [class="LibreWolf"] $ws2
 assign [class="obsidian"] $ws6
 assign [class="thunderbird-esr"] $ws7
+assign [class="Zoho Mail - Desktop"] $ws7
 assign [class="discord"] $ws8
 assign [class="legcord"] $ws8
+assign [class="Mattermost"] $ws8
+assign [class="teams-for-linux"] $ws8
 assign [class="TelegramDesktop"] $ws8
 assign [class="obs"] $ws9
 assign [class="KeePassXC"] $ws10
 
 for_window [class="discord"] layout stacking
 for_window [class="legcord"] layout stacking
+for_window [class="Mattermost"] layout stacking
 for_window [class="TelegramDesktop"] layout stacking
+for_window [class="teams-for-linux"] layout stacking
 for_window [class="LibreWolf"] layout stacking
+for_window [class="thunderbird-esr"] layout stacking
+for_window [class="Zoho Mail - Desktop"] layout stacking
 
 bindsym $mod+Shift+x exec i3lock -i ~/.lock.png
 bindsym $mod+Shift+p exec "shutdown now"
