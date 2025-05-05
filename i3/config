@@ -262,7 +262,7 @@ client.background #263640
 #smart_gaps on
 #to get the class use xprop | grep WM_CLASS | awk '{ print $4 }'
 assign [class="firefox"] $ws2
-assign [class="LibreWolf"] $ws2
+assign [class="librewolf"] $ws2
 assign [class="obsidian"] $ws6
 assign [class="thunderbird-esr"] $ws7
 assign [class="Zoho Mail - Desktop"] $ws7
@@ -279,7 +279,7 @@ for_window [class="legcord"] layout stacking
 for_window [class="Mattermost"] layout stacking
 for_window [class="TelegramDesktop"] layout stacking
 for_window [class="teams-for-linux"] layout stacking
-for_window [class="LibreWolf"] layout stacking
+for_window [class="librewolf"] layout stacking
 for_window [class="thunderbird-esr"] layout stacking
 for_window [class="Zoho Mail - Desktop"] layout stacking
 
