@@ -247,13 +247,15 @@ bar {
 	}
 }
 
-# colour of border, background, text, indicator, and child_border
-client.focused #d12f2c #263640 #93a1a1 #696ebf #2587cc1
-client.focused_inactive #263640 #b08500 #93a1a1 #263640 #263640
-client.unfocused #263640 #b08500 #93a1a1 #263640 #263640
-client.urgent #263640 #b08500 #93a1a1 #263640 #263640
-client.placeholder #263640 #b08500 #93a1a1 #263640 #263640
-client.background #263640
+# colour of             border, background, text, indicator, and child_border
+client.focused          #d12f2c #263640 #93a1a1 #696ebf #2587cc1
+# client.focused_inactive #263640 #b08500 #93a1a1 #263640 #263640
+# client.focused          #141c21 #d12f2c #93a1a1 #696ebf #2587cc1
+client.focused_inactive #d12f2c #263640 #93a1a1 #696ebf #2587cc1
+# client.unfocused        #263640 #b08500 #93a1a1 #263640 #263640
+client.urgent           #263640 #b08500 #93a1a1 #263640 #263640
+client.placeholder      #263640 #b08500 #93a1a1 #263640 #263640
+client.background       #263640
 
 # window rules, you can find the window class using xprop
 #for_window [class=".*"] border pixel 8
@@ -282,6 +284,8 @@ for_window [class="teams-for-linux"] layout stacking
 for_window [class="librewolf"] layout stacking
 for_window [class="thunderbird-esr"] layout stacking
 for_window [class="Zoho Mail - Desktop"] layout stacking
+
+for_window [all] title_window_icon on
 
 bindsym $mod+Shift+x exec i3lock -i ~/.lock.png
 bindsym $mod+Shift+p exec "shutdown now"
