@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 if [ -f /usr/bin/minikube ]; then
-  return
+  exit
 fi
 
 if [ ! -f /usr/local/bin/kubectl ]; then

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 if [ -f /usr/bin/syncthing ]; then
-  return
+  exit
 fi
 
 if [ ! -f /etc/apt/sources.list.d/syncthing.list ]; then
@@ -43,5 +43,5 @@ fi
 
 sudo nala update
 sudo nala install syncthing
-sudo -u $SUDO_USER -c "systemctl --user start syncthing.service"
-sudo -u $SUDO_USER -c "systemctl --user enable syncthing.service"
+sudo systemctl --user start syncthing.service
+sudo systemctl --user enable syncthing.service

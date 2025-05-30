@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 if [ -f /usr/bin/obs ]; then
-  return
+  exit
 fi
 
 sudo add-apt-repository ppa:obsproject/obs-studio

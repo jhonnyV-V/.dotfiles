@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
-UserHome="/home/$SUDO_USER"
+UserHome=$HOME
 
 if [ -f /usr/local/bin/tmux ]; then
-  return
+  exit
 fi
 
 if [ ! -d "$UserHome/Code/tools/tmux" ]; then
@@ -17,7 +17,7 @@ fi
 cd $UserHome/Code/tools/tmux
 
 echo "tmux: installing dependencies"
-sudo apt install libevent-dev ncurses-dev build-essential bison pkg-config -y
+sudo nala install libevent-dev ncurses-dev build-essential bison pkg-config -y
 echo "tmux: building"
 ./configure
 make

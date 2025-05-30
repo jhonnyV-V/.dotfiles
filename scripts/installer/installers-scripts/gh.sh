@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 if [ -f /usr/bin/gh ]; then
-  return
+  exit
 fi
 
 if [ ! -f /etc/apt/sources.list.d/github-cli.list ]; then

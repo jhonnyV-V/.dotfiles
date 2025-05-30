@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
 if [ -f /usr/bin/zathura ]; then
-  return
+  exit
 fi
 
-UserHome="/home/$SUDO_USER"
+UserHome=$HOME
 UserConfig="$UserHome/.config"
 
 sudo nala update

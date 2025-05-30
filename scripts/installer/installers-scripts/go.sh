@@ -1,36 +1,34 @@
 #!/usr/bin/env bash
 
-UserHome="/home/$SUDO_USER"
-BaseGosPath="$UserHome/.gvm/gos"
-GVM="$UserHome/.gvm/bin/gvm"
-echo "user home is $UserHome"
+UserHome=$HOME
 if [ ! -d $UserHome/.gvm ]; then
   sudo nala update
   sudo nala install bison
 
-  sudo -u $SUDO_USER "bash < <(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)"
+  bash < <(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)
 fi
 
-sudo -u $SUDO_USER ./$GVM install go1.4 -B
-sudo -u $SUDO_USER ./$GVM use go1.4
-GoRoot="$BaseGosPath/go1.4"
-sudo -u $SUDO_USER GOROOT_BOOTSTRAP=$GoRoot ./$GVM install go1.17.13
-sudo -u $SUDO_USER ./$GVM use go1.17.13
-GoRoot="$BaseGosPath/go1.17.13"
-sudo -u $SUDO_USER GOROOT_BOOTSTRAP=$GoRoot ./$GVM install go1.20
-sudo -u $SUDO_USER ./$GVM use go1.20
-GoRoot="$BaseGosPath/go1.20"
-sudo -u $SUDO_USER GOROOT_BOOTSTRAP=$GoRoot ./$GVM install go1.23.1
-sudo -u $SUDO_USER ./$GVM use go1.23.1
-GoRoot="$BaseGosPath/go1.23.1"
+gvm install go1.4 -B
+gvm use go1.4
+gvm install go1.17.13
+gvm use go1.17.13
+gvm install go1.20
+gvm use go1.20
+gvm install go1.23.1
+gvm use go1.23.1
+gvm install go1.24.1
+gvm use go1.24.1 --default
 
-sudo -u $SUDO_USER GOROOT_BOOTSTRAP=$GoRoot go install github.com/air-verse/air@latest
+go install github.com/air-verse/air@latest
 
-sudo -u $SUDO_USER GOROOT_BOOTSTRAP=$GoRoot go install github.com/charmbracelet/vhs@latest
-sudo -u $SUDO_USER GOROOT_BOOTSTRAP=$GoRoot go install github.com/charmbracelet/freeze@latest
-sudo -u $SUDO_USER GOROOT_BOOTSTRAP=$GoRoot go install -ldflags="-s -w" -v github.com/jesusprubio/up@latest
-sudo -u $SUDO_USER GOROOT_BOOTSTRAP=$GoRoot go install github.com/jesseduffield/lazydocker@latest
-sudo -u $SUDO_USER GOROOT_BOOTSTRAP=$GoRoot go install github.com/jesseduffield/lazygit@latest
-sudo -u $SUDO_USER GOROOT_BOOTSTRAP=$GoRoot go install github.com/a-h/templ/cmd/templ@latest
-sudo -u $SUDO_USER GOROOT_BOOTSTRAP=$GoRoot go install github.com/eliben/static-server@latest
-sudo -u $SUDO_USER GOROOT_BOOTSTRAP=$GoRoot go telemetry on
+go install github.com/charmbracelet/vhs@latest
+go install github.com/charmbracelet/freeze@latest
+go install -ldflags="-s -w" -v github.com/jesusprubio/up@latest
+go install github.com/jesseduffield/lazydocker@latest
+go install github.com/jesseduffield/lazygit@latest
+go install github.com/a-h/templ/cmd/templ@latest
+go install github.com/eliben/static-server@latest
+go install github.com/Gelio/go-global-update@latest
+go install cuelang.org/go/cmd/cue@latest
+go install github.com/melkeydev/go-blueprint@latest
+go telemetry on

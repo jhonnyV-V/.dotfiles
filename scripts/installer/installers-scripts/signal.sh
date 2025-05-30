@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 if [ -f /opt/Signal/signal-desktop ]; then
-  return
+  exit
 fi
 
 if [ ! -f /usr/share/keyrings/signal-desktop-keyring.gpg ]; then

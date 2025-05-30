@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
-UserHome="/home/$SUDO_USER"
+UserHome=$HOME
 
 if [ -f /usr/bin/librewolf ]; then
-  return
+  exit
 fi
 
 if [ ! -f /etc/apt/sources.list.d/extrepo_librewolf.sources ]; then

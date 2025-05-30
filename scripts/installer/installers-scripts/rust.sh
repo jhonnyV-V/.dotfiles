@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
-UserHome="/home/$SUDO_USER"
+UserHome=$HOME
 if [ -d $UserHome/.cargo]; then
-  return
+  exit
 fi
 
-sudo -u $SUDO_USER -c "curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh"
-sudo -u $SUDO_USER -c "cargo install exa yazi tokei airshipper uv"
+sudo curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+cargo install eza yazi tokei airshipper uv bat tplay hyperfine delta dysk 

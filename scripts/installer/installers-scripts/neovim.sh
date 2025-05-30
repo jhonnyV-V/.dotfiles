@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
 if [ -f /usr/local/bin/nvim ]; then
-  return
+  exit
 fi
 
-UserHome="/home/$SUDO_USER"
+UserHome=$HOME
 UserConfig="$UserHome/.config"
 
 if [! -d "$UserHome/Code/c/neovim" ]; then
@@ -14,8 +14,8 @@ fi
 cd $UserHome/Code/c/neovim
 
 echo "neovim: installing dependencies"
-sudo apt install cmake gettext lua5.1 liblua5.1-0-dev ninja-build ccache -y
+sudo nala install cmake gettext lua5.1 liblua5.1-0-dev ninja-build ccache -y
 echo "neovim: building"
-make CMAKE_BUILD_TYPE=Release
+sudo make CMAKE_BUILD_TYPE=Release
 echo "neovim: building"
 sudo make install

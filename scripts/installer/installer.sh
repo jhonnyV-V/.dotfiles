@@ -32,7 +32,7 @@ execute() {
         return
     fi
 
-    sudo "$@"
+    "$@"
 }
 
 log "run: filter=$filter"

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 if [ -f /usr/bin/i3 ]; then
-  return
+  exit
 fi
 
 sudo nala update
