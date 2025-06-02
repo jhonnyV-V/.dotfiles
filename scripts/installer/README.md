@@ -22,6 +22,7 @@ sudo gpasswd -d <username> sudo
 ```
 
 # TODO
+create folder of optionals and to install each one use a flag for all or a flag that lets you choose or pass the names
 
 add some exclude list or categories so I can install a full category and exclude specific files
 also support passing multiple filters
