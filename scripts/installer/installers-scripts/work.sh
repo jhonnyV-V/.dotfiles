@@ -21,10 +21,6 @@ mariadbClient() {
 }
 
 dbeaver() {
-  if [ -f /usr/bin/dbeaver ]; then
-    return 
-  fi
-
   wget -O $UserHome/Downloads/dbeaver-ce_latest_amd64.deb https://dbeaver.io/files/dbeaver-ce_latest_amd64.deb
   sudo nala update
   sudo nala install $UserHome/Downloads/dbeaver-ce_latest_amd64.deb -y
