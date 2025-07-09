@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-UserHome=$HOME
-
 brunoInstall() {
   if [ -f /usr/bin/bruno ]; then
     return
@@ -21,10 +19,10 @@ mariadbClient() {
 }
 
 dbeaver() {
-  wget -O $UserHome/Downloads/dbeaver-ce_latest_amd64.deb https://dbeaver.io/files/dbeaver-ce_latest_amd64.deb
+  wget -O $HOME/Downloads/dbeaver-ce_latest_amd64.deb https://dbeaver.io/files/dbeaver-ce_latest_amd64.deb
   sudo nala update
-  sudo nala install $UserHome/Downloads/dbeaver-ce_latest_amd64.deb -y
-  rm $UserHome/Downloads/dbeaver-ce_latest_amd64.deb
+  sudo nala install $HOME/Downloads/dbeaver-ce_latest_amd64.deb -y
+  rm $HOME/Downloads/dbeaver-ce_latest_amd64.deb
 }
 
 zohoMail() {
@@ -32,10 +30,10 @@ zohoMail() {
     return 
   fi
 
-  wget -O $UserHome/Downloads/zoho-mail-desktop-lite-installer-x64-v1.6.5.deb https://downloads.zohocdn.com/zmail-desktop/linux/zoho-mail-desktop-lite-installer-x64-v1.6.5.deb 
+  wget -O $HOME/Downloads/zoho-mail-desktop-lite-installer-x64-v1.6.5.deb https://downloads.zohocdn.com/zmail-desktop/linux/zoho-mail-desktop-lite-installer-x64-v1.6.5.deb 
   sudo nala update
-  sudo nala install $UserHome/Downloads/zoho-mail-desktop-lite-installer-x64-v1.6.5.deb -y
-  rm $UserHome/Downloads/zoho-mail-desktop-lite-installer-x64-v1.6.5.deb 
+  sudo nala install $HOME/Downloads/zoho-mail-desktop-lite-installer-x64-v1.6.5.deb -y
+  rm $HOME/Downloads/zoho-mail-desktop-lite-installer-x64-v1.6.5.deb 
 }
 
 teams() {
