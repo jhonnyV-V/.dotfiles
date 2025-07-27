@@ -275,6 +275,8 @@ assign [class="Mattermost"] $ws8
 assign [class="teams-for-linux"] $ws8
 assign [class="TelegramDesktop"] $ws8
 assign [class="obs"] $ws9
+# vtube studio
+assign [class="steam_app_1325860"] $ws9
 assign [class="KeePassXC"] $ws10
 
 for_window [class="discord"] layout stacking
@@ -285,6 +287,8 @@ for_window [class="teams-for-linux"] layout stacking
 for_window [class="librewolf"] layout stacking
 for_window [class="thunderbird-esr"] layout stacking
 for_window [class="Zoho Mail - Desktop"] layout stacking
+for_window [class="obs"] layout stacking
+for_window [class="steam_app_1325860"] layout stacking
 
 for_window [all] title_window_icon on
 
