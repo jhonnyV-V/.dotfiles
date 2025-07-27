@@ -103,3 +103,8 @@ vcl
 krita
 kritarc
 kritadisplayrc
+.avalonia-build-tasks
+fyne
+kdeconnect
+lact
+org.sonusmix.Sonusmix
