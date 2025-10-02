@@ -31,4 +31,5 @@ go install github.com/eliben/static-server@latest
 go install github.com/Gelio/go-global-update@latest
 go install cuelang.org/go/cmd/cue@latest
 go install github.com/melkeydev/go-blueprint@latest
+go install github.com/dkorunic/betteralign/cmd/betteralign@latest
 go telemetry on
