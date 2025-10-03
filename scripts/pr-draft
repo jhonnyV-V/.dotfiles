@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+#get command path and sourcing it
+command=$(which current-pr)
+. $command
+
+pr=$(get_current_current_pr)
+
+gh pr ready $pr --undo
