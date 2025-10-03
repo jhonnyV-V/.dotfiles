@@ -1,17 +1,12 @@
 #!/usr/bin/env bash
 
-pr=""
-
-parse_git_branch() {
- git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+get_current_current_pr(){
+  local branch=$(git rev-parse --abbrev-ref HEAD)
+  if [[ "$1" == "--url" ]]; then
+    echo $(gh pr view $branch --json url --jq ".url")
+  else
+    echo $(gh pr view $branch --json number --jq ".number")
+  fi
 }
 
-if [[ "$1" == "--url" ]]; then
-  branch=$(git rev-parse --abbrev-ref HEAD)
-  pr=$(gh pr view $branch --json url --jq ".url")
-else
-  branch=$(git rev-parse --abbrev-ref HEAD)
-  pr=$(gh pr view $branch --json number --jq ".number")
-fi
-
-echo "$pr" | xclip
+echo $(get_current_current_pr) | xclip
