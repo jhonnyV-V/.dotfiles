@@ -6,4 +6,4 @@ if [ -d $UserHome/.cargo]; then
 fi
 
 sudo curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-cargo install eza yazi tokei airshipper uv bat tplay hyperfine delta dysk caligula pastel
+cargo install eza yazi tokei airshipper uv bat tplay hyperfine delta dysk caligula pastel xleak
