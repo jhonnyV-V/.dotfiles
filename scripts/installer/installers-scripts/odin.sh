@@ -21,6 +21,7 @@ git switch --detach dev-2025-11
 sudo make CMAKE_BUILD_TYPE=Release
 echo "odin: installing"
 make release-native
+sudo nala install libglfw3-dev libglfw3 -y
 odinPath=$(which odin)
 if [[ -z "$odinPath"]]; then
    echo 'export PATH="/path/to/Odin/folder:$PATH"' >> ~/.bashrc
