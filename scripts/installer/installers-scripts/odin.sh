@@ -26,3 +26,20 @@ odinPath=$(which odin)
 if [[ -z "$odinPath"]]; then
    echo 'export PATH="/path/to/Odin/folder:$PATH"' >> ~/.bashrc
 fi
+vulkanSdk=$(which vulkan-sdk)
+if [[ -z "$vulkanSdk" ]]; then
+  cd $HOME/Code/tools
+  mkdir vulkan
+  cd vulkan
+  # Get the latest version (a simple text string is returned)
+  SDK_VERSION=`curl https://vulkan.lunarg.com/sdk/latest/linux.txt`
+  # Get the latest SDK with the latest version variable
+  curl -O https://sdk.lunarg.com/sdk/download/${SDK_VERSION}/linux/vulkan_sdk.tar.xz
+  tar -xf ./vulkan_sdk.tar.xz
+  rm vulkan_sdk.tar.xz
+  cd $SDK_VERSION
+  ./vulkansdk
+  ##Run the system update command:
+  sudo nala update
+  sudo nala install vulkan-tools libvulkan1
+fi
