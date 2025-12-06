@@ -37,8 +37,11 @@ if [[ -z "$vulkanSdk" ]]; then
   curl -O https://sdk.lunarg.com/sdk/download/${SDK_VERSION}/linux/vulkan_sdk.tar.xz
   tar -xf ./vulkan_sdk.tar.xz
   rm vulkan_sdk.tar.xz
+  ln -s $SDK_VERSION default
   cd $SDK_VERSION
   ./vulkansdk
+  chmod +x ./setup-env.sh
+  echo "source ~/Code/tools/vulkan/default/setup-env.sh" >> $HOME/.bashrc
   ##Run the system update command:
   sudo nala update
   sudo nala install vulkan-tools libvulkan1
