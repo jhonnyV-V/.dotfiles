@@ -40,7 +40,8 @@ exec --no-startup-id rand-wallpaper
 exec --no-startup-id flameshot
 
 #set darkmode
-exec --no-startup-id /usr/libexec/gsd-xsettings
+# exec --no-startup-id /usr/libexec/gsd-xsettings
+exec --no-startup-id /usr/bin/cosmic-settings-daemon
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
