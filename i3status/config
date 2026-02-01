@@ -99,9 +99,9 @@ volume master {
 #
 
 tztime local {
-   #format = "%d-%m-%y %H:%M:%S"
-   format = "<span background='#2587cc'>  </span><span background='#bfbaac'> %time </span>"
+   # format = "%d-%m-%y %H:%M:%S"
+   format = "<span background='#2587cc'>  </span><span background='#bfbaac'> %d-%m-%y %H:%M </span>"
    timezone = 'America/Caracas'
-   format_time = '%d-%m-%y at %H:%M'
+   # format_time = '%d-%m-%y at %H:%M'
  }
 
