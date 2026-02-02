@@ -21,7 +21,7 @@ teams() {
 }
 
 mattermost() {
-  flatpak install --user com.mattermost.Desktop
+  ./mattermost.sh
 }
 
 brunoInstall
