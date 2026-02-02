@@ -17,7 +17,7 @@ zohoMail() {
 }
 
 teams() {
-   flatpak install --user flathub com.github.IsmaelMartinez.teams_for_linux
+   ./teams.sh
 }
 
 mattermost() {
