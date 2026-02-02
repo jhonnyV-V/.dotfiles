@@ -12,15 +12,17 @@ if [! -f "/usr/bin/llvm-as-20" ]; then
   chmod +x llvm.sh
   sudo ./llvm.sh 20
   rm llvm.sh
-  sudo nala install -y clang-20 clangd-20 clang
+  sudo nala install -y clang-20 clangd-20 clang libstdc++-14-dev
 fi
+
+llvmconfigPath=$(which llvm-config-20)
 echo "odin: building"
 git switch master
 git pull origin
 git switch --detach dev-2025-11
 sudo make CMAKE_BUILD_TYPE=Release
 echo "odin: installing"
-make release-native
+LLVM_CONFIG=$(llvmconfigPath) make release-native
 sudo nala install libglfw3-dev libglfw3 -y
 odinPath=$(which odin)
 if [[ -z "$odinPath"]]; then
