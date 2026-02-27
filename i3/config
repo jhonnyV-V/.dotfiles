@@ -39,6 +39,10 @@ exec --no-startup-id rand-wallpaper
 
 exec --no-startup-id flameshot
 
+# notifications
+exec_always --no-startup-id dunst -config ~/.config/dunst/dunstrc
+# exec_always --no-startup-id dunst 
+
 #set darkmode
 # exec --no-startup-id /usr/libexec/gsd-xsettings
 exec --no-startup-id /usr/bin/cosmic-settings-daemon
