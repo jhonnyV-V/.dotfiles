@@ -1,0 +1,23 @@
+ConfigFile = '/home/jhonny/.config/lazysql/config.toml'
+
+[application]
+DefaultPageSize = 300
+DisableSidebar = false
+SidebarOverlay = false
+MaxQueryHistoryPerConnection = 100
+TreeWidth = 30
+JSONViewerWordWrap = false
+
+[[database]]
+Name = 'development-netcurio'
+URL = 'mysql://root:secret@127.0.0.1:3306/development'
+Provider = 'mysql'
+Username = ''
+Password = ''
+Hostname = ''
+Port = ''
+DBName = 'development'
+URLParams = ''
+ReadOnly = false
+Schemas = []
+Commands = []
