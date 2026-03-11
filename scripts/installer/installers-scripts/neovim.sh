@@ -1,17 +1,10 @@
 #!/usr/bin/env bash
 
-if [ -f /usr/local/bin/nvim ]; then
-  exit
+if [ ! -d "$HOME/Code/c/neovim" ]; then
+  git clone -b v0.11.6 git@github.com:neovim/neovim.git $HOME/Code/c/neovim
 fi
 
-UserHome=$HOME
-UserConfig="$UserHome/.config"
-
-if [! -d "$UserHome/Code/c/neovim" ]; then
-  git clone -b v0.11.0 git@github.com:neovim/neovim.git $UserHome/Code/c/neovim
-fi
-
-cd $UserHome/Code/c/neovim
+cd $HOME/Code/c/neovim
 
 echo "neovim: installing dependencies"
 sudo nala install cmake gettext lua5.1 liblua5.1-0-dev ninja-build ccache -y

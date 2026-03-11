@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 
-if [! -d "$HOME/Code/odin/odin" ]; then
+if [ ! -d "$HOME/Code/odin/odin" ]; then
   git clone git@github.com:odin-lang/odin.git $HOME/Code/odin/odin
 fi
 
 cd $HOME/Code/odin/odin
 
 echo "odin: installing dependencies"
-if [! -f "/usr/bin/llvm-as-20" ]; then
+if [ ! -f "/usr/bin/llvm-as-20" ]; then
   wget https://apt.llvm.org/llvm.sh
   chmod +x llvm.sh
   sudo ./llvm.sh 20
