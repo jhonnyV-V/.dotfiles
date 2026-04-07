@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 if [ ! -d "$HOME/Code/c/neovim" ]; then
-  git clone -b v0.11.6 git@github.com:neovim/neovim.git $HOME/Code/c/neovim
+  git clone -b v0.12.1 git@github.com:neovim/neovim.git $HOME/Code/c/neovim
 fi
 
 cd $HOME/Code/c/neovim
