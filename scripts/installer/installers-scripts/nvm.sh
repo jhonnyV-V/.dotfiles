@@ -10,3 +10,5 @@ version=24.11.0
 nvm install $version
 nvm use $version --default
 npm install -g tldr @nestjs/cli pnpm@latest-10
+npm --userconfig config set min-release-age=5
+pnpm config set minReleaseAge 2880
